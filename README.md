@@ -14,3 +14,7 @@ sudo docker run -d -p 80:80 myweb
 FROM tomcat:9-jdk11
 
 COPY target/*.war /usr/share/local/tomcat/webapps/
+
+sudo docker build -t maven-web
+
+sudo docker run -d -p 9090:8080 maven-web
