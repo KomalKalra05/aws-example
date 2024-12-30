@@ -2,8 +2,10 @@
 user 
 
 FROM nginx:alpine
+
 COPY . /usr/share/nginx/html
 
 
 sudo docker build -t myweb
+
 sudo docker run -d -p 80:80 myweb
